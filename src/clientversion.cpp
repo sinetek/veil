@@ -6,6 +6,12 @@
 
 #include <tinyformat.h>
 
+/**
+ * Veil is based on Bitcoin Core code. We want to track the final build version.
+ * For now the value is simply kept curated here. XXX
+ */
+#define BITCORE_NAME            "Bitcoin Core"
+#define BITCORE_VERS            "v0.17.0.1"
 
 /**
  * Name of client reported in the 'version' message. Report the same name
@@ -66,7 +72,7 @@ const std::string CLIENT_NAME("Veil");
 #endif
 #endif
 
-const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
+const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX  "  (" BITCORE_NAME " " BITCORE_VERS ")" );
 
 static std::string FormatVersion(int nVersion)
 {

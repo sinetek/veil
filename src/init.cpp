@@ -590,9 +590,7 @@ std::string LicenseInfo()
     const std::string URL_SOURCE_CODE = "<https://github.com/veil-project/veil>";
     const std::string URL_WEBSITE = "<https://veil-project.com>";
 
-    return  std::string("Copyright (C) 2009-2019 The Bitcoin Core developers") + "\n"
-            "Copyright (C) 2015-2019 The PIVX Developers" + "\n" +
-            "Copyright (C) 2017-2019 The Particl Developers" + "\n" +
+    return  std::string() +
             CopyrightHolders(strprintf(_("Copyright (C) %i-%i "), 2018, COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
@@ -607,6 +605,9 @@ std::string LicenseInfo()
            strprintf(_("Distributed under the MIT software license, see the accompanying file %s or %s"), "COPYING", "<https://opensource.org/licenses/MIT>") + "\n" +
            "\n" +
            strprintf(_("This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard."), "<https://www.openssl.org>") +
+           "\n" +
+           "\n" +
+           strprintf(_("This product includes software developed by the following projects: Bitcoin Core, PIVX, Particl.")) +
            "\n";
 }
 
